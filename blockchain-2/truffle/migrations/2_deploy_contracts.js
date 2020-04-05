@@ -1,5 +1,5 @@
-var voting = artifacts.require("Voting");
+var supContract = artifacts.require("./voteContract.sol");
+
 module.exports = function(deployer) {
-   deployer.deploy(voting,['Fillon','Le Pen','Macron'].map(x => web3.utils.asciiToHex(x)));
-  
+  deployer.deploy(supContract);
 };

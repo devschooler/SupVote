@@ -1,15 +1,20 @@
 module.exports = {
-  rpc: {
-  host:"localhost",
-  port:8543
-  },
   networks: {
-  development: {
-  host: "localhost", 
-  port: 8543,
-  network_id: "*",
-  from: "0xbed3886f61e56be1e9783ccd5ed781edb7d33939",
-  gas: 20000000
+    development: {
+      host: "127.0.0.1",
+      port: 8543,
+      network_id: "*" ,// Match any network id
+      from: "0x39b74d0de8339200857fc2200ce6252edc1df1dc",
+      gas: 20000000,
+    }
+  },
+  compilers: {
+    solc: {
+      version: '0.4.25',
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
   }
-  }
-  };
+};
